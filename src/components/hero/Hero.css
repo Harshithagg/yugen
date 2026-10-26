@@ -1,0 +1,40 @@
+.hero__slide {
+    position: relative;
+    height: 100vh;
+    min-height: 640px;
+    overflow: hidden;
+    background: var(--cream);
+}
+
+.hero__shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: auto;
+}
+
+.hero__text {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 8vw;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 4vw, 64px);
+}
+
+.hero__accent {
+    color: var(--red);
+    font-style: italic;
+}
+
+.hero__jp {
+    margin-top: 16px;
+    font-size: 14px;
+    color: rgba(12, 12, 12, 0.6);
+}

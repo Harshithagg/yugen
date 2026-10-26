@@ -1,12 +1,22 @@
-// Navbar.jsx
-// This is the navigation bar that appears at the top of every page.
-// It will contain your restaurant's logo and links to jump to each section.
+import "./Navbar.css";
 
 function Navbar() {
   return (
-    <nav>
-      {/* Logo and nav links will go here */}
-    </nav>
+    <header className="navbar">
+      <a href="#hero" className="navbar__logo">
+        <span className="navbar__name">YŪGEN</span>
+        <span className="navbar__sub">Modern Japanese Kitchen</span>
+      </a>
+
+      <nav className="navbar__links">
+        <a href="#about">About</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#location">Location</a>
+      </nav>
+
+      <a href="#reservation" className="navbar__cta">Reserve a seat</a>
+    </header>
   );
 }
 
