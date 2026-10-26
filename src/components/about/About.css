@@ -1,0 +1,170 @@
+.about {
+    background-color: var(--cream);
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
+    padding: 140px 5vw 80px;
+}
+
+.about__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+/* intro */
+.about__title {
+    font-size: clamp(36px, 4.5vw, 64px);
+}
+
+.about__accent {
+    color: var(--red);
+    font-style: italic;
+}
+
+.about__text {
+    max-width: 420px;
+    margin-top: 20px;
+    font-size: 15px;
+    color: rgba(12, 12, 12, 0.7);
+}
+
+.about__link {
+    display: inline-block;
+    margin-top: 24px;
+    font-size: 14px;
+    color: var(--red);
+    border-bottom: 1px solid var(--red);
+}
+
+/* cards */
+.about__cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about__card {
+    width: 300px;
+    min-height: 180px;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.about__card--photo img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about__card--photo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.about__card-body {
+    position: relative;
+    z-index: 1;
+    padding: 24px;
+    color: var(--cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+    min-height: 180px;
+    gap: 12px;
+}
+
+.about__card-body h3 {
+    font-size: 22px;
+}
+
+.about__card-body a {
+    font-size: 12px;
+    text-decoration: underline;
+}
+
+.about__card--red {
+    background: var(--red);
+    color: var(--cream);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+/* bottom row */
+.about__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 48px;
+}
+
+.about__beauty h3 {
+    font-size: 28px;
+}
+
+.about__beauty .jp {
+    margin-top: 8px;
+    font-size: 12px;
+    color: rgba(12, 12, 12, 0.6);
+}
+
+.about__pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    max-width: 640px;
+}
+
+.about__num {
+    color: var(--red);
+    font-size: 12px;
+}
+
+.about__pillar h4 {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 500;
+    margin: 6px 0;
+}
+
+.about__pillar p {
+    font-size: 13px;
+    color: rgba(12, 12, 12, 0.7);
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+    .about__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .about {
+        padding: 100px 24px 60px;
+    }
+
+    .about__card {
+        width: 100%;
+    }
+
+    .about__pillars {
+        grid-template-columns: 1fr;
+    }
+}
