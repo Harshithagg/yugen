@@ -1,6 +1,7 @@
 import "./About.css";
 import bg from "../../assets/images/aboutbg.png";
-import interior from "../../assets/images/restaurant-interior.png";
+import interior from "../../assets/images/restaurant-interior2.jpg";
+import branch from "../../assets/images/branch1.png";
 
 const pillars = [
   {
@@ -62,6 +63,7 @@ function About() {
             <p>Good food</p>
             <p>Good people</p>
             <p>Good times</p>
+            <img className="about__branch" src={branch} alt="" />
           </article>
         </div>
 

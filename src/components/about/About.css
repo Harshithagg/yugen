@@ -168,3 +168,19 @@
         grid-template-columns: 1fr;
     }
 }
+
+.about__card--photo {
+    background: #0c0c0c;
+}
+
+.about__card--photo img {
+    transform: scale(1.08);
+}
+
+.about__branch {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    width: 55%;
+    pointer-events: none;
+}

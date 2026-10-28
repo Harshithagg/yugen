@@ -1,0 +1,216 @@
+.reservation {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 680px;
+}
+
+
+.reservation__left {
+    position: relative;
+    overflow: hidden;
+    background: var(--red);
+    color: var(--cream);
+    padding: 100px 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reservation__left h2 {
+    font-size: clamp(36px, 4vw, 56px);
+}
+
+.reservation__jp {
+    margin-top: 10px;
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+.reservation__lead {
+    margin-top: 32px;
+    max-width: 280px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.reservation__branch {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: min(320px, 60%);
+    pointer-events: none;
+}
+
+
+.reservation__right {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-color: #0c0c0c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 5vw;
+}
+
+.reservation__right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+/* the white card */
+.reservation__card {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 340px;
+    padding: 28px;
+    border-radius: 12px;
+    background: #fff;
+    color: var(--ink);
+}
+
+.reservation__field {
+    display: block;
+    margin-bottom: 16px;
+}
+
+.reservation__field>span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: rgba(12, 12, 12, 0.6);
+}
+
+.reservation__field input,
+.reservation__field select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    background: #eee8df;
+    font: inherit;
+    font-size: 14px;
+    color: var(--ink);
+}
+
+.reservation__field input:focus,
+.reservation__field select:focus {
+    outline: none;
+    border-color: var(--red);
+}
+
+.reservation__time {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+}
+
+.reservation__btn {
+    width: 100%;
+    margin-top: 8px;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    background: var(--red);
+    color: var(--cream);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.reservation__btn:hover {
+    opacity: 0.9;
+}
+
+.reservation__link {
+    display: block;
+    margin: 14px auto 0;
+    background: none;
+    border: none;
+    font: inherit;
+    font-size: 13px;
+    color: rgba(12, 12, 12, 0.6);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.reservation__error {
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: var(--red);
+}
+
+.reservation__status {
+    margin-bottom: 16px;
+    font-family: var(--font-display);
+    font-size: 22px;
+    line-height: 1.2;
+}
+
+.reservation__status--ok {
+    color: #2f6b3c;
+}
+
+.reservation__status--no {
+    color: var(--red);
+}
+
+.reservation__ref {
+    margin-bottom: 16px;
+    font-size: 13px;
+    letter-spacing: 0.05em;
+    color: rgba(12, 12, 12, 0.7);
+}
+
+.reservation__summary {
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    background: #eee8df;
+    font-size: 14px;
+}
+
+.reservation__summary li {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 4px 0;
+}
+
+.reservation__summary span {
+    color: rgba(12, 12, 12, 0.55);
+}
+
+.reservation__note {
+    margin-bottom: 18px;
+    font-size: 13px;
+    color: rgba(12, 12, 12, 0.7);
+}
+
+/* tablet and mobile: stack the two halves */
+@media (max-width: 900px) {
+    .reservation {
+        grid-template-columns: 1fr;
+    }
+
+    .reservation__left {
+        padding: 80px 24px 140px;
+    }
+}
+
+@media (max-width: 640px) {
+    .reservation__right {
+        padding: 48px 20px;
+    }
+
+    .reservation__card {
+        padding: 22px;
+    }
+}

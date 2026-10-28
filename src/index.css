@@ -41,3 +41,7 @@ a {
 .jp {
    font-family: var(--font-jp);
 }
+
+section[id] {
+   scroll-margin-top: 70px;
+}
