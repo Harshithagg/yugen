@@ -7,8 +7,6 @@
   }
 
   .about__inner {
-
-
       display: flex;
       flex-direction: column;
       gap: 64px;
@@ -179,6 +177,8 @@
       position: absolute;
       right: -10px;
       bottom: -10px;
-      width: 55%;
+      width: 60%;
       pointer-events: none;
+      filter: brightness(0) invert(1);
+      opacity: 0.45;
   }

@@ -35,10 +35,19 @@
 
 .reservation__branch {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    width: min(320px, 60%);
+    right: -2%;
+    bottom: -1%;
+    width: min(520px, 85%);
     pointer-events: none;
+    filter: brightness(0) invert(1);
+    /* ink becomes cream */
+    opacity: 0.9;
+}
+
+/* keep the text above the branch */
+.reservation__left>*:not(.reservation__branch) {
+    position: relative;
+    z-index: 1;
 }
 
 
