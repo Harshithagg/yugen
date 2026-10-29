@@ -1,0 +1,9 @@
+.scene {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}

@@ -1,7 +1,13 @@
+.hero {
+    position: relative;
+    /* height = 3 slides, 100vh each, automatically */
+}
+
 .hero__slide {
     position: relative;
     height: 100vh;
-    min-height: 640px;
+    height: 100svh;
+    min-height: 560px;
     overflow: hidden;
     background: var(--cream);
 }
@@ -21,10 +27,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 8vw;
+    padding-left: max(var(--gutter), calc((100vw - var(--container)) / 2));
 }
 
-.hero h1 {
+.hero__title {
     font-size: clamp(36px, 4vw, 64px);
 }
 
@@ -37,4 +43,32 @@
     margin-top: 16px;
     font-size: 14px;
     color: rgba(12, 12, 12, 0.6);
+}
+
+/* ---------- the traveling ramen ---------- */
+
+/* a layer as tall as the whole hero, sitting on top of the slides */
+.hero__scene-track {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    pointer-events: none;
+}
+
+/* inside it, a screen-sized box that sticks while the hero is on screen */
+.hero__scene-sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    height: 100svh;
+}
+
+@media (max-width: 860px) {
+    .hero__shape {
+        right: -30%;
+    }
+
+    .hero__text {
+        padding-left: var(--gutter);
+    }
 }

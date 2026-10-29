@@ -1,18 +1,19 @@
 .location {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
-    min-height: 560px;
+    min-height: calc(100svh - var(--nav-h));
+    /* fills the screen, footer stays below */
 }
 
 .location__info {
-    padding: 100px 5vw;
+    padding: 72px 48px 72px max(var(--gutter), calc((100vw - var(--container)) / 2));
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .location__info h2 {
-    font-size: clamp(36px, 4vw, 52px);
+    font-size: clamp(36px, 4vw, 56px);
 }
 
 .location__jp {
@@ -22,32 +23,31 @@
 }
 
 .location__block {
-    margin-bottom: 24px;
+    margin-bottom: 28px;
 }
 
 .location__block h3 {
     font-family: var(--font-body);
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     margin-bottom: 4px;
 }
 
 .location__block p {
-    font-size: 14px;
-    max-width: 280px;
+    font-size: 15px;
+    max-width: 320px;
     color: rgba(12, 12, 12, 0.7);
 }
 
 .location__directions {
     align-self: flex-start;
     margin-top: 8px;
-    font-size: 14px;
+    font-size: 15px;
     color: var(--red);
     border-bottom: 1px solid var(--red);
     padding-bottom: 2px;
 }
 
-/* map */
 .location__map {
     position: relative;
     display: block;
@@ -68,7 +68,6 @@
     transform: scale(1.03);
 }
 
-/* red pin made with CSS */
 .location__pin {
     position: absolute;
     top: 45%;
@@ -93,17 +92,17 @@
     transform: translate(-50%, -50%);
 }
 
-/* tablet and mobile */
 @media (max-width: 900px) {
     .location {
         grid-template-columns: 1fr;
+        min-height: 0;
     }
 
     .location__info {
-        padding: 80px 24px 48px;
+        padding: 64px var(--gutter) 40px;
     }
 
     .location__map {
-        min-height: 360px;
+        min-height: 340px;
     }
 }

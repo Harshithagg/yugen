@@ -43,5 +43,16 @@ a {
 }
 
 section[id] {
-   scroll-margin-top: 70px;
+   scroll-margin-top: var(--nav-h);
+}
+
+/* every section's content uses the same width, so all left edges line up */
+.about__inner,
+.menu__inner,
+.gallery__header,
+.gallery__stage,
+.footer__top,
+.footer__copy {
+   width: min(100% - 2 * var(--gutter), var(--container));
+   margin-inline: auto;
 }

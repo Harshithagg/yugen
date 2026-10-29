@@ -1,7 +1,7 @@
 .reservation {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-height: 680px;
+    min-height: calc(100svh - var(--nav-h));
 }
 
 
@@ -10,7 +10,7 @@
     overflow: hidden;
     background: var(--red);
     color: var(--cream);
-    padding: 100px 5vw;
+    padding: 80px 48px 80px max(var(--gutter), calc((100vw - var(--container)) / 2));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 60px 5vw;
+    padding: 60px var(--gutter);
 }
 
 .reservation__right::before {
@@ -198,10 +198,11 @@
 @media (max-width: 900px) {
     .reservation {
         grid-template-columns: 1fr;
+        min-height: 0;
     }
 
     .reservation__left {
-        padding: 80px 24px 140px;
+        padding: 72px var(--gutter) 140px;
     }
 }
 

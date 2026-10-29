@@ -1,14 +1,12 @@
 .gallery {
     --w: 340px;
-    /* width of the big center image */
-    padding: 120px 0 100px;
+    padding: 48px 0 var(--section-y);
     overflow: hidden;
 }
 
+
 .gallery__header {
-    max-width: 1100px;
-    margin: 0 auto 40px;
-    padding: 0 5vw;
+    margin-bottom: 28px;
 }
 
 .gallery__header h2 {
@@ -25,7 +23,6 @@
 .gallery__stage {
     position: relative;
     height: 520px;
-    max-width: 1100px;
     margin: 0 auto;
 }
 
@@ -115,16 +112,13 @@
 @media (max-width: 640px) {
     .gallery {
         --w: 220px;
-        padding: 80px 0;
+        padding: 40px 0 64px;
     }
 
     .gallery__stage {
         height: 340px;
     }
 
-    .gallery__header {
-        padding: 0 24px;
-    }
 
     .gallery__arrow {
         width: 36px;

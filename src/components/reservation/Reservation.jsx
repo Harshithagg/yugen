@@ -212,7 +212,7 @@ function Reservation() {
           {step === "available" && (
             <form onSubmit={handleConfirm} noValidate>
               <p className="reservation__status reservation__status--ok">
-                ✓ Great news, a table is available!
+                Great news, a table is available!
               </p>
               {summary}
 
@@ -269,7 +269,7 @@ function Reservation() {
           {step === "confirmed" && (
             <div>
               <p className="reservation__status reservation__status--ok">
-                ✓ Your booking is confirmed
+                Your booking is confirmed
               </p>
               <p className="reservation__ref">Booking ref: {bookingRef}</p>
               {summary}
