@@ -1,7 +1,7 @@
 import "./About.css";
-import bg from "../../assets/images/aboutbg.png";
+import bg from "../../assets/images/aboutbg.webp";
 import interior from "../../assets/images/restaurant-interior2.jpg";
-import branch from "../../assets/images/branch1.png";
+import branch from "../../assets/images/branch1.webp";
 
 const pillars = [
   {

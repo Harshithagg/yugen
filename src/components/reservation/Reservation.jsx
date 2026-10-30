@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Reservation.css";
 import bg from "../../assets/images/restaurant-interior2.jpg";
-import branch from "../../assets/images/branch2.png";
+import branch from "../../assets/images/branch2.webp";
 
 const HOURS = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
 const MINUTES = ["00", "15", "30", "45"];

@@ -1,5 +1,5 @@
-import shoyu from "../assets/images/shoyuramen.png";
-import tonkotsu from "../assets/images/tonkotsuramen.png";
+import shoyu from "../assets/images/shoyuramen.webp";
+import tonkotsu from "../assets/images/tonkotsuramen.webp";
 
 export const categories = ["Ramen", "Small Plates", "Drinks", "Desserts"];
 

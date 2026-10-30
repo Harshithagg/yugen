@@ -1,5 +1,5 @@
 import "./Footer.css";
-import branch from "../../assets/images/branch2.png";
+import branch from "../../assets/images/branch2.webp";
 
 const columns = [
   {

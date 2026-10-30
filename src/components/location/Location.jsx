@@ -1,5 +1,5 @@
 import "./Location.css";
-import map from "../../assets/images/basemap.png";
+import map from "../../assets/images/basemap.webp";
 import { restaurant } from "../../data/restaurant";
 
 function Location() {
