@@ -13,8 +13,7 @@
 }
 
 .navbar--solid {
-    background: rgba(241, 233, 219, 0.94);
-    backdrop-filter: blur(10px);
+    background: var(--cream);
     box-shadow: 0 1px 0 rgba(12, 12, 12, 0.08);
 }
 

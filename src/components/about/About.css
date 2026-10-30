@@ -175,10 +175,16 @@
 
   .about__branch {
       position: absolute;
-      right: -10px;
-      bottom: -10px;
-      width: 60%;
+      right: -5%;
+      bottom: -8%;
+      width: 78%;
       pointer-events: none;
-      filter: brightness(0) invert(1);
-      opacity: 0.45;
+      filter: brightness(0);
+      opacity: 0.6;
+  }
+
+  /* keep the text above the branch */
+  .about__card--red p {
+      position: relative;
+      z-index: 1;
   }
