@@ -1,16 +1,50 @@
-# React + Vite
+# YŪGEN | Modern Japanese Ramen Kitchen
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive restaurant website for a fictional ramen restaurant in Shibuya, Tokyo. It has a scroll-driven 3D hero, a sliding gallery, a menu with dish details, and a table-booking flow.
 
-Currently, two official plugins are available:
+**Live site:** https://yugen-brown.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+> **Concept project.** This is a personal portfolio piece. The restaurant is fictional, bookings are simulated (nothing is saved or emailed), and the menu ratings are placeholders.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- **3D scroll hero.** A ramen bowl built in Spline whose ingredients fall as you scroll, driven by scroll position. It stops at the end of the hero and does not carry into the next section. The 3D scene is skipped on phones for performance.
+- **Sliding gallery.** A carousel where the center photo is large and the neighbors are smaller. Arrows, dots, or clicking a side image changes the active photo, with spring animations.
+- **Menu.** Category tabs and a data-driven list. Clicking a dish opens a popup with its photo, rating, prep time, spice level, and ingredients. Esc or a backdrop click closes it.
+- **Table reservation.** Date picker, time selectors, and guest count. Validation covers opening hours, past times, phone, and email. It simulates availability and confirms with a booking reference.
+- **Location.** One tap opens Google Maps with directions.
+- **Responsive.** Built for desktop, tablet, and mobile, with a full-screen mobile menu.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Built with
+
+| Tool | Used for |
+|---|---|
+| React + Vite | Components and fast dev tooling |
+| Plain CSS | Layout, theming through CSS variables, and responsive design |
+| Motion | Gallery and popup animations, and scroll progress |
+| Spline (`@splinetool/react-spline`) | Interactive 3D hero |
+| Vercel | Hosting, with automatic deploys on every push |
+
+Designed in **Figma**, with the 3D scene made in **Spline and blender**.
+
+## Performance
+
+Lighthouse scores on mobile: **Performance 90 · Accessibility 90 · Best Practices 100 · SEO 100**
+
+## Run it locally
+
+```bash
+git clone https://github.com/Harshithagg/yugen.git
+cd yugen
+npm install
+npm run dev
+```
+
+Then open the local address shown in the terminal (usually `http://localhost:5173`).
+
+To create a production build, run `npm run build`.
+
+## Author
+
+**Harshitha GG**
